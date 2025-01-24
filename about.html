@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filiallar - WorkHub Central</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+}
+
+.nav ul li a:hover, 
+.nav ul li a.active {
+    background: #575757;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Branches Section */
+.branches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.branch {
+    width: 350px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(100px);
+    animation: slideInLeft 1s ease-in-out forwards;
+}
+
+.branch:nth-child(even) {
+    transform: translateX(-100px);
+    animation: slideInRight 1s ease-in-out forwards;
+}
+
+.branch h5 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.branch img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.branch h4 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.branch .stars {
+    font-size: 1.2rem;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.branch p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .branches {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .branch {
+        width: 90%;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">WorkHub Central</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Bosh sahifa</a></li>
+                    <li><a href="about.html" class="active">Filiallarimiz</a></li>
+                    <li><a href="services.html">Xizmatlar</a></li>
+                    <li><a href="membership.html">A'zolik</a></li>
+                    <li><a href="contact.html">Bog'lanish</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>Filiallarimiz</h2>
+            <p>WorkHub Central – bu shahar markazida joylashgan zamonaviy kovorking maydoni bo‘lib, tadbirkorlar,
+                freelancerlar va ijodkorlar uchun eng yaxshi ish muhitini yaratishga qaratilgan. Bizning ofislarimiz
+                ilg‘or texnologiyalar, qulay joylashuv va yuqori sifatli xizmatlar bilan ajralib turadi. Har bir
+                filialimiz shaxsiy va guruh bo‘lib ishlash uchun qulay sharoitlar yaratgan.</p>
+
+            <div class="branches">
+                <!-- branch 1 -->
+                <div class="branch">
+                    <h5>GroundZero Coworking</h5>
+                    <img src="https://groundzero.uz/wp-content/uploads/2023/10/DSC01743.jpg" alt="groundzero">
+                    <h4>Toshkent shahri, Mirobod tumani, Nukus ko'chasi, 88/1.</h4>
+                    <div class="stars">★★★★★</div>
+                    <p>Toshkent shahrida joylashgan ushbu kovorking markazi frilanserlar, startaplar va kichik bizneslar
+                        uchun zamonaviy ish joylarini taklif etadi. U yerda yuqori tezlikdagi internet, qulay ofis
+                        mebellari va uchrashuv xonalari mavjud.</p>
+                </div>
+                <!-- branch 2 -->
+                <div class="branch">
+                    <h5>Impact Hub Tashkent</h5>
+                    <img src="https://avatars.mds.yandex.net/get-altay/5554141/2a00000184038c410678d1ca054386d1d49e/L_height"
+                        alt="opis">
+                    <h4>Toshkent shahri, Mirzo Ulug'bek tumani, Buyuk Turon ko'chasi, 7.</h4>
+                    <div class="stars">★★★★☆</div>
+                    <p>Bu markaz innovatsion g'oyalar va tadbirkorlikni qo'llab-quvvatlashga qaratilgan. U turli
+                        tadbirlar, seminarlar va treninglar o'tkazish uchun maydonchalar, shuningdek, hamkorlik va
+                        tarmoq yaratish imkoniyatlarini taqdim etadi..</p>
+                </div>
+                <!-- branch 3 -->
+                <div class="branch">
+                    <h5>Work Lounge</h5>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxntQpksGX2ckUwfR3kxpEN14mRC45daMAh1UZ8VoIs4C-WyX78QJyUIbf6-nFmgrd7g&usqp=CAU"
+                        alt="encrypted-tbn0">
+                    <h4>Toshkent shahri, Yunusobod tumani, Chinobod ko'chasi, 5.</h4>
+                    <div class="stars">★★★★★</div>
+                    <p>Yunusobod tumanida joylashgan ushbu kovorking markazi qulay va shinam muhitda ishlashni
+                        xohlovchilar uchun mo'ljallangan. U yerda individual ish joylari, kichik uchrashuv xonalari va
+                        dam olish zonalari mavjud..</p>
+                </div>
+                <!-- branch 4 -->
+                <div class="branch">
+                    <h5>InnoVersity Coworking</h5>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxntQpksGX2ckUwfR3kxpEN14mRC45daMAh1UZ8VoIs4C-WyX78QJyUIbf6-nFmgrd7g&usqp=CAU"
+                        alt="Toshkent Filiali">
+                    <h4>Toshkent shahri, Yakkasaroy tumani, Shota Rustaveli ko'chasi, 1.</h4>
+                    <div class="stars">★★★★★</div>
+                    <p>Yakkasaroy tumanida joylashgan bu markaz innovatsion va ijodiy loyihalar ustida ishlovchilar
+                        uchun mo'ljallangan. U zamonaviy texnologiyalar bilan jihozlangan va turli treninglar hamda
+                        seminarlar o'tkaziladi.</p>
+                </div>
+                <!-- branch 5 -->
+                <div class="branch">
+                    <h5>Locus Coworking</h5>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxntQpksGX2ckUwfR3kxpEN14mRC45daMAh1UZ8VoIs4C-WyX78QJyUIbf6-nFmgrd7g&usqp=CAU"
+                        alt="Toshkent Filiali">
+                    <h4>Toshkent shahri, Chilonzor tumani, Bunyodkor ko'chasi, 42.</h4>
+                    <div class="stars">★★★★★</div>
+                    <p>Chilonzor tumanida joylashgan ushbu kovorking markazi keng va yorug' ish joylarini taklif etadi.
+                        U yerda yuqori tezlikdagi internet, konferensiya zallari va dam olish zonalari mavjud..</p>
+                </div>
+                <!-- branch 6 -->
+                <div class="branch">
+                    <h5>SmartSpace Coworking</h5>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxntQpksGX2ckUwfR3kxpEN14mRC45daMAh1UZ8VoIs4C-WyX78QJyUIbf6-nFmgrd7g&usqp=CAU"
+                        alt="Toshkent Filiali">
+                    <h4>TToshkent shahri, Shayxontohur tumani, Zarqaynar ko'chasi, 4.</h4>
+                    <div class="stars">★★★★★</div>
+                    <p>Shayxontohur tumanida joylashgan bu markaz zamonaviy ofis uskunalari, yuqori tezlikdagi internet
+                        va uchrashuv xonalari bilan jihozlangan. U frilanserlar va kichik jamoalar uchun qulay ish
+                        muhitini ta'minlaydi.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Bizning maqsadimiz – ijodkorlar va tadbirkorlar uchun eng yaxshi ish muhitini yaratish.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xizmatlar - WorkHub Central</title>
+    <style>
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+}
+
+.nav ul li a:hover, 
+.nav ul li a.active {
+    background: #575757;
+    border-radius: 5px;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    width: 350px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.service-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.service-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-item ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.service-item ul li {
+    font-size: 1rem;
+    color: #666;
+}
+
+.service-item .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #007bff;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer ul {
+    list-style: none;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer ul li {
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 90%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">WorkHub Central</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Bosh sahifa</a></li>
+                    <li><a href="about.html">Filiallarimiz</a></li>
+                    <li><a href="services.html" class="active">Xizmatlar</a></li>
+                    <li><a href="membership.html">A'zolik</a></li>
+                    <li><a href="contact.html">Bog'lanish</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="services">
+        <div class="container">
+            <h2>Xizmatlarimiz</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>Hot Desk</h3>
+                    <p>Kundalik foydalanish uchun umumiy ish joylari.</p>
+                    <p class="price"><strong>50,000 so'm/kun</strong></p>
+                </div>
+                <div class="service-item">
+                    <h3>Shaxsiy ofislar</h3>
+                    <p>2-10 kishilik jamoalar uchun maxsus ofislar.</p>
+                    <p class="price"><strong>2,500,000 so'm/oy</strong></p>
+                </div>
+                <div class="service-item">
+                    <h3>Uchrashuv xonalari</h3>
+                    <p>Videokonferensiya va jamoaviy uchrashuvlar uchun.</p>
+                    <p class="price"><strong>150,000 so'm/soat</strong></p>
+                </div>
+                <div class="service-item">
+                    <h3>Virtual ofis</h3>
+                    <p>Yuridik manzil va pochta xizmati bilan ta'minlash.</p>
+                    <p class="price"><strong>500,000 so'm/oy</strong></p>
+                </div>
+                <div class="service-item">
+                    <h3>Tadbirlar zali</h3>
+                    <p>Seminar va tadbirlar uchun jihozlangan maydon.</p>
+                    <p class="price"><strong>300,000 so'm/soat</strong></p>
+                </div>
+                <div class="service-item">
+                    <h3>Coworking kechalari</h3>
+                    <p>Kechasi ham ishlash uchun maxsus reja.</p>
+                    <p class="price"><strong>100,000 so'm/tun</strong></p>
+                </div>
+                <div class="service-item">
+                    <h3>Texnik xizmat</h3>
+                    <p>Kompyuter va printerlarga texnik xizmat.</p>
+                    <p class="price"><strong>100,000 so'm/soat</strong></p>
+                </div>
+                <div class="service-item">
+                    <h3>Networking tadbirlari</h3>
+                    <p>Tadbirkorlar va freelancerlar uchun maxsus uchrashuvlar.</p>
+                    <p class="price"><strong>Bepul (maxsus a'zolik bilan)</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Batafsil ma'lumot olish uchun bog'laning: <a href="mailto:info@workhubcentral.com">info@workhubcentral.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
